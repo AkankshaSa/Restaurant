@@ -1,0 +1,18 @@
+{
+	"restaurants": [{
+		"id": 1,
+		"name": "KFC",
+		"city": "Hyderabad",
+		"Contact": "9898989898"
+	},{
+	 	"id": 2,
+		"name": "Domino's",
+		"city": "Hyderabad",
+		"Contact": "9898989898"
+	},{
+	 	"id": 3,
+		"name": "Starbucks",
+		"city": "Chennai",
+		"Contact": "9898989898"
+	}]
+}
