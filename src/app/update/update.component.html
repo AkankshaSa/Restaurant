@@ -1,0 +1,26 @@
+<form (ngSubmit)="updateapi()">
+<table class="table table-borderless" >
+    <h5>List of all Restaurants</h5>
+    <tr>
+      <th> No.</th>
+      <th> Name </th>  <br><br><br>
+      <th> City </th><br>
+      <th> Contact </th>
+      <th scope="col">Actions</th>
+      
+      
+    </tr>
+    <tr *ngFor= "let item of fetch" >
+      <td> {{item.id}} </td>
+      
+      <td> {{item.name}} </td> <br><br><br>
+      <td> {{item.city}} </td><br>
+      <td> {{item.Contact}} </td>
+      <td> <a routerLink="/edit/{{item.id}}">
+        <i class="fa fa-pencil-square-o" style="color: blue; cursor: pointer;"></i> </a>
+      <i (click)="delete(item.id)" class="fa fa-trash" aria-hidden="true" style="color: red; cursor: pointer;"></i></td>
+    </tr>
+    
+  </table>
+  <button  type ="submit" class=" btn btn-primary">Update </button>
+</form>

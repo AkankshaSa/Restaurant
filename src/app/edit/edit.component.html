@@ -1,0 +1,20 @@
+<form [formGroup]="editRestro" (ngSubmit)="saveapi()"> 
+    <h5> Edit Restaurant</h5>
+    <div >
+    <label>Name:</label>
+    <input type="text"  name="your name" formControlName="name" [(ngModel)]="edit.name" style="margin: 25px; border-color: orange;" >
+    </div>
+    <div>
+    <label>City:</label>
+    <input type="text"  name=" Your City" formControlName="city" [(ngModel)]="edit.city" style="margin: 40px; border-color: orange;" >
+    </div>
+    <div>
+    <label>Contact:</label>
+    <input type="text" name=" Your contact No." formControlName="contact" [(ngModel)]="edit.contact" style="margin: 10px; border-color: orange;" >
+    </div><br><br>
+    
+    
+    <button  type ="submit" class=" btn btn-primary">Save </button>
+    </form>
+    
+    

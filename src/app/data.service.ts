@@ -8,19 +8,26 @@ export class DataService {
   httpclient: any;
 
   constructor( private http:HttpClient) { }
+  url="http://localhost:3000/restaurants";
 
   getdata()
   {
-    let obj:any
-    let url="http://localhost:3000/restaurants";
-    obj= this.http.get(url);
-    console.log("object="+obj)
-    return obj;
+    
+    return this.http.get(this.url);
+  }
+    
+
+  inputdata(val : any){
+    console.log(val)
+    return this.http.post(this.url,val);
   }
 
-  inputdata(val){
-    return this.httpclient.post('http://localhost:3000/restaurants',val);
-
+  editdata(id : any){
+      return this.http.get('${this.url}/${id}')
   }
+  deletedata(id: any){
+      return this.http.delete('${this.url}/${id}')
+  }
+  
 }
 
