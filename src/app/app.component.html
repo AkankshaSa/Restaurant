@@ -9,22 +9,5 @@
       <a class="nav-link border" routerLink="show">Show Restaurants</a>
 </nav>
 
-
-<table class="table table-borderless" >
-  <h5>List of all Restaurants</h5>
-  <tr>
-    <td> No.</td>
-    <td> Name </td> <br><br><br>
-    <td> City </td><br>
-    <td> Contact </td>
-  </tr>
-  <tr *ngFor= "let item of fetch">
-    <td> {{item.id}} </td>
-    <td> {{item.name}} </td> <br><br><br>
-    <td> {{item.city}} </td><br>
-    <td> {{item.Contact}} </td>
-  </tr>
-
-</table>
 <router-outlet></router-outlet>
 

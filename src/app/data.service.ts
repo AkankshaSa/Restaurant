@@ -21,12 +21,15 @@ export class DataService {
     console.log(val)
     return this.http.post(this.url,val);
   }
-
-  editdata(id : any){
-      return this.http.get('${this.url}/${id}')
+  updatedata(id){
+    return this.http.get(`${this.url}/${id}`)
   }
-  deletedata(id: any){
-      return this.http.delete('${this.url}/${id}')
+
+  editdata(id,data){
+      return this.http.put(`${this.url}/${id}`,data)
+  }
+  deletedata(id){
+      return this.http.delete(`${this.url}/${id}`)
   }
   
 }

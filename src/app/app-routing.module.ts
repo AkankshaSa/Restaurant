@@ -6,6 +6,7 @@ import { ShowComponent } from './show/show.component';
 import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
+  {path:'', component:ShowComponent},
   {path:'add', component:AddComponent},
   {path:'show', component:ShowComponent},
   {path:'update', component:UpdateComponent},

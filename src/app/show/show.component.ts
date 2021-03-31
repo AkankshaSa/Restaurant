@@ -9,14 +9,12 @@ import{DataService } from '../data.service';
 export class ShowComponent implements OnInit {
   
   fetch :any =[];
-
-  constructor(private user:DataService) { }
-  showapi(){
+  constructor(private user:DataService){
     this.user.getdata().subscribe(result=>{
       console.log("result is:"+result)
       this.fetch = result
-  })
-}
+    })
+  }
   
   ngOnInit(): void {
   }

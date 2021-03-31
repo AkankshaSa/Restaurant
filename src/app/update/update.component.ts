@@ -8,8 +8,8 @@ import{ DataService } from '../data.service'
 })
 export class UpdateComponent implements OnInit {
   fetch :any =[];
-  constructor(private user:DataService) {}
-  updateapi(){
+  constructor(private user:DataService) {
+  
   this.user.getdata().subscribe(result=>{
     console.log("result is:"+result)
     this.fetch = result
@@ -17,6 +17,7 @@ export class UpdateComponent implements OnInit {
 }
 
     delete(item){
+      console.log('abc'+item)
       this.fetch.splice(item-1,1)
       this.user.deletedata(item).subscribe(result=>{
         console.log("result is" +result)
