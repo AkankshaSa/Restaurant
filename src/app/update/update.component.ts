@@ -16,7 +16,8 @@ export class UpdateComponent implements OnInit {
   })
 }
 
-    delete(item){
+     delete(item){
+       debugger
       console.log('abc'+item)
       this.fetch.splice(item-1,1)
       this.user.deletedata(item).subscribe(result=>{

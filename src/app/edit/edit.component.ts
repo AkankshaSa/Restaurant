@@ -10,12 +10,17 @@ import{DataService} from '../data.service'
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
-  
+  alert:boolean=false
   editRestro=new FormGroup({
     name:new FormControl(''),
     city:new FormControl(''),
     contact:new FormControl('')
+    
   })
+  onFileSelected(event){
+    console.log(event);
+
+  }
 
   constructor(private data:DataService,private router:ActivatedRoute) { }
  
@@ -27,15 +32,17 @@ export class EditComponent implements OnInit {
         city:new FormControl(res['city']),
         contact:new FormControl(res['contact'])
     })
-  }
-    )
+  })
+  
   }
   saveapi(){
     console.log(this.editRestro.value);
     this.data.editdata(this.router.snapshot.params.id,this.editRestro.value).subscribe(res=>
       console.log(res))
     this.editRestro.reset({})
-    
+    this.alert=true
   }
-
+  closeAlert(){
+    this.alert=false
+  }
 }

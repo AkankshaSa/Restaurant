@@ -8,7 +8,7 @@ import{DataService } from '../data.service';
 })
 export class ShowComponent implements OnInit {
   
-  fetch :any =[];
+  fetch:any =[];
   constructor(private user:DataService){
     this.user.getdata().subscribe(result=>{
       console.log("result is:"+result)

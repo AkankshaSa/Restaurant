@@ -1,17 +1,27 @@
+
 <form [formGroup]="addRestro" (ngSubmit)="saveapi()"> 
+<div class="cointener">
 <h5> Add Restaurant</h5>
+
+<div class="flex">
 <div >
 <label>Name:</label>
-<input type="text"  name="your name" formControlName="name" [(ngModel)]="add.name" style="margin: 25px; border-color: orange;" >
+<input type="text"  name="your name" formControlName="name" [(ngModel)]="add.name" style="margin: 35px; border-color: orange;" >
 </div>
 <div>
 <label>City:</label>
-<input type="text"  name=" Your City" formControlName="city" [(ngModel)]="add.city" style="margin: 40px; border-color: orange;" >
+<input type="text"  name=" Your City" formControlName="city" [(ngModel)]="add.city" style="margin: 55px; border-color: orange;" >
 </div>
 <div>
 <label>Contact:</label>
-<input type="tel" name=" Your contact No." formControlName="contact" [(ngModel)]="add.contact" style="margin: 10px; border-color: orange;" >
-</div><br><br>
+<input type="tel" name=" Your contact No." formControlName="contact" [(ngModel)]="add.contact" style="margin: 25px; border-color: orange;" >
+</div>
+<div>
+<label>Image:</label>
+<input type="file" (change)="onFileSelected($event)" style="margin: 40px; border-color: orange;">
+</div>
+</div>
+
 
 
 <button  type ="submit" class=" btn btn-primary">Save </button>
@@ -21,5 +31,6 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+</div>
 </form>
 

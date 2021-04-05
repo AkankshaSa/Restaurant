@@ -9,6 +9,7 @@ export class DataService {
 
   constructor( private http:HttpClient) { }
   url="http://localhost:3000/restaurants";
+  url1="http://localhost:3000/users";
 
   getdata()
   {
@@ -31,6 +32,9 @@ export class DataService {
   deletedata(id){
       return this.http.delete(`${this.url}/${id}`)
   }
-  
+  adddata(val : any){
+    console.log(val)
+    return this.http.post(this.url1,val);
+  }
 }
 

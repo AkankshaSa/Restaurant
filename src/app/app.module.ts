@@ -11,7 +11,9 @@ import { AddComponent } from './add/add.component';
 import { ShowComponent } from './show/show.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UpdateComponent } from './update/update.component';
-import { EditComponent } from './edit/edit.component'
+import { EditComponent } from './edit/edit.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EditComponent } from './edit/edit.component'
     AddComponent,
     ShowComponent,
     UpdateComponent,
-    EditComponent
+    EditComponent,
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,14 @@ export class AddComponent implements OnInit {
   addRestro=new FormGroup({
     name:new FormControl(''),
     city:new FormControl(''),
-    contact:new FormControl("")
+    contact:new FormControl('')
+    
   })
+  onFileSelected(event){
+    console.log(event);
+
+  }
+
   
   constructor( private data:DataService ) {}
   ngOnInit(): void {
@@ -25,6 +31,7 @@ export class AddComponent implements OnInit {
     this.data.inputdata(this.add).subscribe(res=>{
       console.log(res)
     })
+
     this.alert=true
     this.addRestro.reset({})
   }

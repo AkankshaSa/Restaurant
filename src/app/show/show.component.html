@@ -1,18 +1,21 @@
 
 <table class="table table-borderless" >
+  <div class="cointener">
     <h5>List of all Restaurants</h5>
     <tr>
       <td> No.</td>
       <td> Name </td> <br><br><br>
       <td> City </td><br>
       <td> Contact </td>
+      <td> Image </td>
     </tr>
     <tr *ngFor= "let item of fetch">
       <td> {{item.id}} </td>
       <td> {{item.name}} </td> <br><br><br>
       <td> {{item.city}} </td><br>
-      <td> {{item.Contact}} </td>
+      <td> {{item.contact}} </td>
+      <td> <img  src={{item.image}} > </td>
     </tr>
-  
+  </div>
 </table>
 

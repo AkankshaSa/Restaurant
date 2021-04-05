@@ -1,4 +1,5 @@
-<form [formGroup]="editRestro" (ngSubmit)="saveapi()"> 
+<form class="abc" [formGroup]="editRestro" (ngSubmit)="saveapi()"> 
+  
     <h5> Edit Restaurant</h5>
     <div >
     <label>Name:</label>
@@ -12,9 +13,20 @@
     <label>Contact:</label>
     <input type="text" name=" Your contact No." formControlName="contact" ngModel style="margin: 10px; border-color: orange;" >
     </div><br><br>
+    <div>
+      <label>Image:</label>
+      <input type="file" (change)="onFileSelected($event)" style="margin: 40px; border-color: orange;">
+      </div>
     
     
     <button  type ="submit" class=" btn btn-primary">Save </button>
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Edit done.
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
     </form>
     
     
